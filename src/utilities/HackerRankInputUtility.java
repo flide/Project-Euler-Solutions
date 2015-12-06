@@ -8,6 +8,19 @@ import java.util.List;
 
 public class HackerRankInputUtility {
 
+	/*
+	 * Copy Paste code for the Hacker Rank Website, instead of calling the utility functions
+	 
+	 	BufferedReader stdin = new BufferedReader(new InputStreamReader(System.in));
+		String line = stdin.readLine();
+		long numberOfTestCases = Integer.parseInt(line);
+		List<Long> listOfTestCases = new ArrayList<>();
+		for(int i = 0; i < numberOfTestCases; i++){
+			line = stdin.readLine();
+			listOfTestCases.add(Long.parseLong(line));
+		}
+	 */
+	
 	private static final BufferedReader stdin = new BufferedReader(new InputStreamReader(System.in));
 	
 	private static int getNumberOfTestCases() throws IOException{

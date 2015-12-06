@@ -12,14 +12,14 @@ public class Solution {
 		BufferedReader stdin = new BufferedReader(new InputStreamReader(System.in));
 		String line = stdin.readLine();
 		long numberOfTestCases = Integer.parseInt(line);
-		List<Long> listOfN = new ArrayList<>();
+		List<Long> listOfTestCases = new ArrayList<>();
 		for(int i = 0; i < numberOfTestCases; i++){
 			line = stdin.readLine();
-			listOfN.add(Long.parseLong(line));
+			listOfTestCases.add(Long.parseLong(line));
 		}
 		
 		for(int i=0; i<numberOfTestCases; i++){
-			long N = listOfN.get(i);
+			long N = listOfTestCases.get(i);
 			long sumOfMultiplesOf3LessThanN = getSumOfMultiplesOfXLessThanN(3,N);
 			long sumOfMultiplesOf5LessThanN = getSumOfMultiplesOfXLessThanN(5,N);
 			long sumOfMultiplesOf15LessThanN = getSumOfMultiplesOfXLessThanN(15,N);
