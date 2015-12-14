@@ -1,0 +1,39 @@
+package problems._20;
+
+import java.math.BigInteger;
+import java.util.Scanner;
+
+public class Solution {
+
+	public static void main(String[] args) {
+		Scanner stdin = new Scanner(System.in);
+		int numberOfTestCases = stdin.nextInt();
+		for (int i = 0 ; i<numberOfTestCases; i++){
+			String N = stdin.next();
+			long result = getSumOfDigits(getFactorial(N));
+			System.out.println(result);
+		}
+		stdin.close();
+	}
+
+	private static long getSumOfDigits(BigInteger number) {
+		long sum = 0;
+		while(!(number.compareTo(new BigInteger("0")) == 0)){
+			int digit = number.remainder(new BigInteger("10")).intValue();
+			sum = sum + digit;
+			number = number.divide(new BigInteger("10"));
+		}
+		return sum;
+	}
+
+	private static BigInteger getFactorial(String numberString) {
+		
+		BigInteger number = new BigInteger(numberString);
+		if(number.compareTo(new BigInteger("1")) == 0 || number.compareTo(new BigInteger("1")) == -1)
+			return new BigInteger("1");
+		
+		return number.multiply(getFactorial(number.subtract(new BigInteger("1")).toString()));
+		
+	}
+
+}
